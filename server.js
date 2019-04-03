@@ -5,12 +5,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// app.locals.notes = [];
-app.locals.notes = [
-    {id: shortid.generate(), title: 'gym', noteItems:['suana', 'swim', 'yoga']},
-    {id: shortid.generate(), title: 'groceries', noteItems:['apple sauce']},
-    {id: shortid.generate(), title: 'study', noteItems:['C++', 'simple math']}
-]
+app.locals.notes = [];
+// app.locals.notes = [
+//     {id: shortid.generate(), title: 'gym', noteItems:['suana', 'swim', 'yoga']},
+//     {id: shortid.generate(), title: 'groceries', noteItems:['apple sauce']},
+//     {id: shortid.generate(), title: 'study', noteItems:['C++', 'simple math']}
+// ]
 
 app.listen('3001', () => {
   console.log(`Server is now running at http://localhost:3001`);
