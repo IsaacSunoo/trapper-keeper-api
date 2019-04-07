@@ -33,7 +33,7 @@ app.put('/api/notes/:id', (req, res) => {
   const note = req.body;
   const noteIdx = app.locals.notes.findIndex(note => note.id == id);
   if (noteIdx === -1) return res.status(404).json('Note not found.');
-  app.locals.notes.splice(noteIndex, 1, note);
+  app.locals.notes.splice(noteIdx, 1, note);
   return res.status(200).json(app.locals.notes[noteIdx]);
 });
 
