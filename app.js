@@ -37,6 +37,10 @@ app.put('/api/notes/:id', (req, res) => {
   return res.status(200).json(app.locals.notes[noteIdx]);
 });
 
+app.patch('/api/notes', (req, res) => {
+  app.locals.notes = req.body;
+});
+
 app.delete('/api/notes/:id', (req, res) => {
     const { id } = req.params;
     const { notes } = app.locals;
